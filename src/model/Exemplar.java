@@ -1,6 +1,5 @@
 package model;
-
-public class biblioteca {
+public abstract class Exemplar {
     protected String titulo;
     protected String autor;
     protected String resumo;
@@ -8,6 +7,16 @@ public class biblioteca {
     protected int ano;
     protected int quantidadePaginas;
     protected String genero;
+
+    public Exemplar(String titulo, String autor, String resumo, String editora, int ano, int quantidadePaginas, String genero) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.resumo = resumo;
+        this.editora = editora;
+        this.ano = ano;
+        this.quantidadePaginas = quantidadePaginas;
+        this.genero = genero;
+    }
 
     public String getTitulo() {
         return titulo;
@@ -63,40 +72,5 @@ public class biblioteca {
 
     public void setGenero(String genero) {
         this.genero = genero;
-    }
-
-    public void cadastrarNoAcervo(){
-        //TODO funcionalidade p/ cadastrar livros e revistas
-    }
-
-    public void consultarNoAcervo(){
-        //TODO colocar sonulta por (título, autor e resumo) - informar palavra-chave a ser buscada
-    }
-
-    public void cadastrarUsuarios(){
-        //TODO (criar usuário com nome, cpf, data de nascimento, indicador de adulto ou criança)
-    }
-
-
-    public void editarUsuario(){
-        //TODO permitir editar campos de usuários
-    }
-
-    public void registrarMovimentacaoUsuario(){
-        //TODO - Registrar o usuário que está fazendo a movimentação, assim como a data da mesma
-        //TODO - Empréstimo de exemplar
-    }
-
-    public void emitirRelatorioEmprestimo(){
-
-    }
-
-    public void emitirRelatorioDevolucao(){
-
-    }
-
-    public void emitirRankingLeitura(){
-        //TODO - Somente para usuários que forem crianças
-        //TODO - Somente contar obras que o usuário afirmou ter lido
     }
 }
